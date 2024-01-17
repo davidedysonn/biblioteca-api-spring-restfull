@@ -1,0 +1,25 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+e
+5restfull-with-spring-crud-completo-pagination/pom.xml,6\4\6440616a04b82ace20958cbe4477e794cf990ad4
+à
+¯restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/RestfullWithSpringCrudCompletoPaginationApplication.java,6\c\6cf21e3b142462a040c47cb7f90761dae234932d
+¸
+‡restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/model/Livro.java,8\5\8521497f6a9108e153953ce5525659270f83f104
+¹
+ˆrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/Livro.java,3\0\30ff0fc738ec035d4ca011e285d051107395633a
+É
+˜restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/repositories/LivroRepository.java,e\3\e3aaa787bbba24e9155e4531e103d75e1a2a278b
+Â
+‘restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/services/LivroService.java,5\9\5963514c9adba13a15014e6dc77818dca421d7d7
+º
+‰restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/dtos/LivroDto.java,0\9\099e825600c3df6349501a8573430628d454dede
+È
+—restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/controllers/LivroController.java,a\1\a15499b1cabac9c78c61ed6839b8da6732382d27
+Ô
+£restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/services/servicesimpls/LivroServiceIplm.java,9\c\9c8e8937c483d846fa524f617e16f9961859b96e
+¿
+Žrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/mapper/GeralMapper.java,d\2\d2354e3a15095c80d5d25cea1380485c3ea141ac
+¿
+Žrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/mapper/LivroMapper.java,3\2\3295c4b2749aeb7a5cf06b9647d8c1e4d4ef1f90

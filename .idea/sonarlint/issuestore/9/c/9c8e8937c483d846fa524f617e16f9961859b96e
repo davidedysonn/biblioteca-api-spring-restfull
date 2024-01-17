@@ -1,0 +1,7 @@
+
+„
+java:S1488,"bImmediately return this expression instead of assigning it to the temporary variable "retornoDto".(ãÑäÄúÿÿÿÿ8èßÅÑ1
+h
+java:S2789%"FEnsure this "Optional" could never be null and remove this null-check.(—…¨şûÿÿÿÿ8èßÅÑ1
+G
+java:S6829"*Add @Autowired to one of the constructors.(Ö¹£ä8ëßÅÑ1
