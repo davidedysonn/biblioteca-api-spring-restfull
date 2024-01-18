@@ -5,8 +5,6 @@ e
 5restfull-with-spring-crud-completo-pagination/pom.xml,6\4\6440616a04b82ace20958cbe4477e794cf990ad4
 à
 ¯restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/RestfullWithSpringCrudCompletoPaginationApplication.java,6\c\6cf21e3b142462a040c47cb7f90761dae234932d
-¸
-‡restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/model/Livro.java,8\5\8521497f6a9108e153953ce5525659270f83f104
 ¹
 ˆrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/Livro.java,3\0\30ff0fc738ec035d4ca011e285d051107395633a
 É

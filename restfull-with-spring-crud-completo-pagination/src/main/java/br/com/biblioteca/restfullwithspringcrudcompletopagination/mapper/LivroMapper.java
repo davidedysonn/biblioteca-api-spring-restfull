@@ -5,5 +5,5 @@ import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Livro;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "Spring")
-public interface LivroMapper extends GeralMapper<LivroDto, Livro>{
+public interface LivroMapper extends GeralMapper <LivroDto, Livro> {
 }

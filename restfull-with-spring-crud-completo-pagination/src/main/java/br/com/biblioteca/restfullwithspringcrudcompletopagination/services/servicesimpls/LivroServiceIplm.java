@@ -7,18 +7,17 @@ import br.com.biblioteca.restfullwithspringcrudcompletopagination.repositories.L
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class LivroServiceIplm implements LivroService {
 
-    private LivroRepository livroRepository;
-    private LivroMapper livroMapper;
-
-    public LivroServiceIplm() {
-    }
+    private final LivroRepository livroRepository;
+    private final LivroMapper livroMapper;
 
     public LivroServiceIplm(LivroRepository livroRepository, LivroMapper livroMapper) {
         this.livroRepository = livroRepository;
@@ -28,7 +27,11 @@ public class LivroServiceIplm implements LivroService {
     @Override
     public LivroDto cadastroLivro(LivroDto livroDto) {
         Livro livro = livroMapper.toEntity(livroDto);
-        return livroMapper.toDto(livroRepository.save(livro));
+
+
+        Livro livro2 =  livroRepository.save(livro);
+        LivroDto respostaLivroDto = livroMapper.toDto(livro2);
+        return respostaLivroDto;
     }
 
     @Override
