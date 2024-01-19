@@ -19,7 +19,7 @@ public class LivroController {
         this.livroService = livroService;
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/cadastrar")
     public ResponseEntity<LivroDto> cadastroLivro (@RequestBody LivroDto livroDto) throws URISyntaxException {
         LivroDto respostaLivroDto = livroService.cadastroLivro(livroDto);
         return ResponseEntity.created(new URI("/livro/cadastro")).body(respostaLivroDto);
@@ -31,15 +31,27 @@ public class LivroController {
         return ResponseEntity.ok(respostaLivroDto);
     }
 
-    @GetMapping("livros")
-    public ResponseEntity<List<LivroDto>> livrosCadastrados (){
+    @GetMapping("/buscar-livros")
+    public ResponseEntity<List<LivroDto>> buscarLivros (){
         List<LivroDto> respostaLivrosDto = livroService.buscarLivros();
         return ResponseEntity.ok(respostaLivrosDto);
     }
+    @GetMapping("/buscar-livro/{id}")
+    public ResponseEntity<LivroDto> buscarLivro (@PathVariable Long id){
+        LivroDto respostaLivrosDto = livroService.buscarLivroPorId(id);
+        return ResponseEntity.ok(respostaLivrosDto);
+    }
+    @GetMapping("/buscar-livro/nome")
+    public ResponseEntity <List<LivroDto>> buscarNomeLivro (@RequestParam String nomeLivro){
+        List<LivroDto> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro);
+        return ResponseEntity.ok(respostaLivrosDto);
+    }
 
-    @DeleteMapping("remover-livro")
+    @DeleteMapping("/remover-livro/{id}")
     public ResponseEntity<LivroDto> removerLivro (@PathVariable Long id){
         livroService.deletarCliente(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }

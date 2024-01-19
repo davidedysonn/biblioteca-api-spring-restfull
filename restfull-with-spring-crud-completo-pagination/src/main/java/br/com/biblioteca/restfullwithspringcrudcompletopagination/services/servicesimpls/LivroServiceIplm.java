@@ -27,9 +27,7 @@ public class LivroServiceIplm implements LivroService {
     @Override
     public LivroDto cadastroLivro(LivroDto livroDto) {
         Livro livro = livroMapper.toEntity(livroDto);
-
-
-        Livro livro2 =  livroRepository.save(livro);
+        Livro livro2 = livroRepository.save(livro);
         LivroDto respostaLivroDto = livroMapper.toDto(livro2);
         return respostaLivroDto;
     }
@@ -64,6 +62,34 @@ public class LivroServiceIplm implements LivroService {
 
         return retornoLivros;
     }
+
+    @Override
+    public List<LivroDto> buscaPorNomeLivro(String nomeLivro) {
+        Livro respostaEnt = livroRepository.buscarLivroPorNome(nomeLivro);
+        List<Livro> listLivro = new ArrayList<>();
+        for(int i=0; respostaEnt.getNomeLivro().length() < i;i++){
+            listLivro.add(respostaEnt);
+        }
+        List<LivroDto> livroDtoList = livroMapper.listToDto(listLivro);
+
+        return livroDtoList;
+    }
+
+    @Override
+    public LivroDto buscarLivroPorId (Long id) {
+        Optional<Livro> livro = livroRepository.findById(id);
+        if(!livro.isEmpty() && livro != null){
+            Livro livroEntity = livro.get();
+            LivroDto livroDto = livroMapper.toDto(livroEntity);
+            return livroDto;
+        }else {
+            // fazer tratamento de erro
+            return null;
+        }
+
+
+    }
+
 
     @Override
     public void deletarCliente(Long id) {
