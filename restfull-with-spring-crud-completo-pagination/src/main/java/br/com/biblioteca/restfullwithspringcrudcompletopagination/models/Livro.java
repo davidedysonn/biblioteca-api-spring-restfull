@@ -16,7 +16,7 @@ public class Livro implements Serializable {
     @Column(name="nome_livro")
     private String nomeLivro;
     private String autor;
-    private List<String> generos;
+    private List<Genero> generos;
     @Column(name="data_lancamento")
     private LocalDate dataLancamento;
 
@@ -24,7 +24,7 @@ public class Livro implements Serializable {
 
     }
 
-    public Livro(Long idLivro, String nomeLivro, String autor, List<String> generos, LocalDate dataLancamento) {
+    public Livro(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
         this.autor = autor;
@@ -56,11 +56,11 @@ public class Livro implements Serializable {
         this.autor = autor;
     }
 
-    public List<String> getGeneros() {
+    public List<Genero> getGeneros() {
         return generos;
     }
 
-    public void setGeneros(List<String> generos) {
+    public void setGeneros(List<Genero> generos) {
         this.generos = generos;
     }
 
