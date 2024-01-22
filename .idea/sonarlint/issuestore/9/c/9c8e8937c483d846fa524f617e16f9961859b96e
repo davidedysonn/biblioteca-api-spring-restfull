@@ -1,28 +1,19 @@
 
 …
-java:S1488"hImmediately return this expression instead of assigning it to the temporary variable "respostaLivroDto".(™»×ê8Ã’ù™Ò1
+java:S1488"hImmediately return this expression instead of assigning it to the temporary variable "respostaLivroDto".(™»×ê8£š·’Ó1
 „
-java:S1488-"bImmediately return this expression instead of assigning it to the temporary variable "retornoDto".(ãÑäÄúÿÿÿÿ8Ã’ù™Ò1
-†
-java:S1488I"dImmediately return this expression instead of assigning it to the temporary variable "livroDtoList".(ô¤§¥şÿÿÿÿ8Ä’ù™Ò1
+java:S1488-"bImmediately return this expression instead of assigning it to the temporary variable "retornoDto".(ãÑäÄúÿÿÿÿ8£š·’Ó1
+‚
+java:S1488D"`Immediately return this expression instead of assigning it to the temporary variable "livroEnt".(í¹Îøÿÿÿÿ8£š·’Ó1
 }
-java:S1488S"`Immediately return this expression instead of assigning it to the temporary variable "livroDto".(á¶äØ8Ä’ù™Ò1
+java:S1488M"`Immediately return this expression instead of assigning it to the temporary variable "livroDto".(á¶äØ8£š·’Ó1
 h
-java:S2789&"FEnsure this "Optional" could never be null and remove this null-check.(—…¨şûÿÿÿÿ8Ä’ù™Ò1
+java:S2789&"FEnsure this "Optional" could never be null and remove this null-check.(—…¨şûÿÿÿÿ8¤š·’Ó1
 h
-java:S2789Q"FEnsure this "Optional" could never be null and remove this null-check.(ÔˆÖäùÿÿÿÿ8Ä’ù™Ò1
-?
-java:S2189F""Correct this loop's end condition.(öÔâ¶8ê’ù™Ò1
+java:S2789K"FEnsure this "Optional" could never be null and remove this null-check.(ÔˆÖäùÿÿÿÿ8¤š·’Ó1
 Y
-java:S2589Q"7Remove this expression which always evaluates to "true"(ÔˆÖäùÿÿÿÿ8ê’ù™Ò1
+java:S2589&"7Remove this expression which always evaluates to "true"(—…¨şûÿÿÿÿ8Æš·’Ó1
 Y
-java:S2589&"7Remove this expression which always evaluates to "true"(—…¨şûÿÿÿÿ8ê’ù™Ò1
-V
-java:S2251F"9"i" is incremented and will never reach "stop condition".(öÔâ¶8ö’ù™Ò1
+java:S2589K"7Remove this expression which always evaluates to "true"(ÔˆÖäùÿÿÿÿ8Æš·’Ó1
 s
-java:S2159a"VRemove this call to "equals"; comparisons between unrelated types always return false.(ÌÁñ¼8ù’ù™Ò1
-T
-java:S1128
-"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8ù’ù™Ò1
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ù’ù™Ò1
+java:S2159["VRemove this call to "equals"; comparisons between unrelated types always return false.(ÌÁñ¼8Òš·’Ó1

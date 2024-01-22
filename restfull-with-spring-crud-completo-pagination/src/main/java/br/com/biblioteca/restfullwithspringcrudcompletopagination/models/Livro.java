@@ -1,9 +1,6 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -14,10 +11,13 @@ import java.util.Objects;
 public class Livro implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_livro")
     private Long idLivro;
+    @Column(name="nome_livro")
     private String nomeLivro;
     private String autor;
     private List<String> generos;
+    @Column(name="data_lancamento")
     private LocalDate dataLancamento;
 
     public Livro(){

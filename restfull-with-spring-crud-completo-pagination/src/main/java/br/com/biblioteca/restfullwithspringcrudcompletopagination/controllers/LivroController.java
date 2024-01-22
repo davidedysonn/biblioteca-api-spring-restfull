@@ -1,6 +1,7 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.controllers;
 
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos.LivroDto;
+import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Livro;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,8 +43,8 @@ public class LivroController {
         return ResponseEntity.ok(respostaLivrosDto);
     }
     @GetMapping("/buscar-livro/nome")
-    public ResponseEntity <List<LivroDto>> buscarNomeLivro (@RequestParam String nomeLivro){
-        List<LivroDto> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro);
+    public ResponseEntity <List<String>> buscarNomeLivro (@RequestParam String nomeLivro){
+        List<String> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro);
         return ResponseEntity.ok(respostaLivrosDto);
     }
 

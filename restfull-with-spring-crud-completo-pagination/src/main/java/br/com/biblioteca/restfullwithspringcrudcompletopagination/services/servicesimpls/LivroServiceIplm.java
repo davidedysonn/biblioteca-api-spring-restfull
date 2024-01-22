@@ -64,15 +64,9 @@ public class LivroServiceIplm implements LivroService {
     }
 
     @Override
-    public List<LivroDto> buscaPorNomeLivro(String nomeLivro) {
-        Livro respostaEnt = livroRepository.buscarLivroPorNome(nomeLivro);
-        List<Livro> listLivro = new ArrayList<>();
-        for(int i=0; respostaEnt.getNomeLivro().length() < i;i++){
-            listLivro.add(respostaEnt);
-        }
-        List<LivroDto> livroDtoList = livroMapper.listToDto(listLivro);
-
-        return livroDtoList;
+    public List<String> buscaPorNomeLivro(String nomeLivro) {
+        List<String> livroEnt = livroRepository.buscarLivroPorNome(nomeLivro);
+        return livroEnt;
     }
 
     @Override
