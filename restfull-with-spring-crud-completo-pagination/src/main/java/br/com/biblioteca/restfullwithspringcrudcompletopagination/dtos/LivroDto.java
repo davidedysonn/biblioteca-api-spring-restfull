@@ -1,10 +1,9 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos;
 
-import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Genero;
+import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.Genero;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public class LivroDto implements Serializable {

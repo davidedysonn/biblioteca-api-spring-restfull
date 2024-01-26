@@ -1,4 +1,4 @@
-package br.com.biblioteca.restfullwithspringcrudcompletopagination.models;
+package br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns;
 
 public enum Genero {
     ACAO("AÇÃO"),

@@ -23,3 +23,15 @@ e
 ¢restfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/services/servicesimpl/LivroServiceImpl.java,c\4\c43762830ece602aba0e8fd55c8efb533917e265
 ∫
 ârestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/Genero.java,f\c\fcfbd5b32294cb9efcebfb0a9f4ba480c9b87300
+∫
+ârestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/Pessoa.java,b\a\ba8daf6cb2ab2a31caf1344a394c1f61b5d90385
+¬
+ërestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/TipoAturizacao.java,5\7\576d4a81a9f5db1a1efce0a5c5fc09c402cfee54
+¿
+èrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/enuns/Genero.java,8\3\83e35aa6f1a8bc5b5ab78b8c667209490894f6c1
+»
+órestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/enuns/TipoAturizacao.java,d\2\d2ce2dea01dafb0cb9c2b382a8e788b73b5d8762
+ª
+ärestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/dtos/PessoaDto.java,f\0\f03671452b47eb1c79228d796333907d9e57842b
+ 
+ôrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/repositories/PessoaRepository.java,e\c\ec129e88b010ec38fd66cfc586a17b92045423c4

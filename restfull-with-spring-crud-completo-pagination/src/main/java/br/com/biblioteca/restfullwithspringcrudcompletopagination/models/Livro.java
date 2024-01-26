@@ -1,10 +1,10 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.models;
 
+import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.Genero;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 @Entity
