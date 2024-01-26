@@ -1,8 +1,9 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.controllers;
 
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos.LivroDto;
-import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Livro;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/livro")
 public class LivroController {
+    private final Logger log = LoggerFactory.getLogger(LivroController.class);
 
     private LivroService livroService;
 
@@ -25,18 +27,21 @@ public class LivroController {
     @PostMapping("/cadastrar")
     public ResponseEntity<LivroDto> cadastroLivro (@RequestBody LivroDto livroDto) throws URISyntaxException {
         LivroDto respostaLivroDto = livroService.cadastroLivro(livroDto);
+        log.debug("Cadastro criado com sucesso");
         return ResponseEntity.created(new URI("/livro/cadastro")).body(respostaLivroDto);
     }
 
     @PutMapping("/alterar-cadastro/{id}")
     public ResponseEntity<LivroDto> atualizarCadastroLivro (@PathVariable Long id, @RequestBody LivroDto livroDto){
         LivroDto respostaLivroDto = livroService.atualizarLivro(id,livroDto);
+        log.debug("Livro atualizado com sucesso");
         return ResponseEntity.ok(respostaLivroDto);
     }
 
     @PutMapping("/adicionar-quantidade/{id}/")
     public ResponseEntity<LivroDto> adicionarQuantidade (@PathVariable Long id, @RequestParam int quantidade){
         LivroDto respostaLivroDto = livroService.adicionarQuantidade(id,quantidade);
+
         return ResponseEntity.ok(respostaLivroDto);
     }
 
