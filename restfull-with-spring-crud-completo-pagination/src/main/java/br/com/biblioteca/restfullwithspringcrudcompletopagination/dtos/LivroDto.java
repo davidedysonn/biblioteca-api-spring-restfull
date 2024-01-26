@@ -13,17 +13,19 @@ public class LivroDto implements Serializable {
     private String autor;
     private List<Genero> generos;
     private LocalDate dataLancamento;
+    private int quantidade;
 
     public LivroDto(){
 
     }
 
-    public LivroDto(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento) {
+    public LivroDto(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento, int quantidade) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
         this.autor = autor;
         this.generos = generos;
         this.dataLancamento = dataLancamento;
+        this.quantidade = quantidade;
     }
 
     public Long getIdLivro() {
@@ -64,5 +66,13 @@ public class LivroDto implements Serializable {
 
     public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 }

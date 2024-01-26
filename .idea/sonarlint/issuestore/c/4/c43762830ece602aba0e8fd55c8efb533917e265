@@ -1,0 +1,25 @@
+
+…
+java:S1488"hImmediately return this expression instead of assigning it to the temporary variable "respostaLivroDto".(™»×ê8½ÃÔ1
+„
+java:S1488-"bImmediately return this expression instead of assigning it to the temporary variable "retornoDto".(ãÑäÄúÿÿÿÿ8¾ÃÔ1
+„
+java:S1488="bImmediately return this expression instead of assigning it to the temporary variable "retornoDto".(ãÑäÄúÿÿÿÿ8¾ÃÔ1
+‚
+java:S1488S"`Immediately return this expression instead of assigning it to the temporary variable "livroEnt".(ôÜ•ÿşÿÿÿÿ8¾ÃÔ1
+}
+java:S1488\"`Immediately return this expression instead of assigning it to the temporary variable "livroDto".(á¶äØ8¾ÃÔ1
+h
+java:S2789&"FEnsure this "Optional" could never be null and remove this null-check.(—…¨şûÿÿÿÿ8¿ÃÔ1
+h
+java:S2789:"FEnsure this "Optional" could never be null and remove this null-check.(—…¨şûÿÿÿÿ8¿ÃÔ1
+h
+java:S2789Z"FEnsure this "Optional" could never be null and remove this null-check.(ÔˆÖäùÿÿÿÿ8¿ÃÔ1
+Y
+java:S2589&"7Remove this expression which always evaluates to "true"(—…¨şûÿÿÿÿ8ÖÃÔ1
+Y
+java:S2589:"7Remove this expression which always evaluates to "true"(—…¨şûÿÿÿÿ8ÖÃÔ1
+Y
+java:S2589Z"7Remove this expression which always evaluates to "true"(ÔˆÖäùÿÿÿÿ8ÖÃÔ1
+s
+java:S2159l"VRemove this call to "equals"; comparisons between unrelated types always return false.(ÌÁñ¼8ëÃÔ1

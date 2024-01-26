@@ -3,6 +3,8 @@ package br.com.biblioteca.restfullwithspringcrudcompletopagination.controllers;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos.LivroDto;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Livro;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +34,12 @@ public class LivroController {
         return ResponseEntity.ok(respostaLivroDto);
     }
 
+    @PutMapping("/adicionar-quantidade/{id}/")
+    public ResponseEntity<LivroDto> adicionarQuantidade (@PathVariable Long id, @RequestParam int quantidade){
+        LivroDto respostaLivroDto = livroService.adicionarQuantidade(id,quantidade);
+        return ResponseEntity.ok(respostaLivroDto);
+    }
+
     @GetMapping("/buscar-livros")
     public ResponseEntity<List<LivroDto>> buscarLivros (){
         List<LivroDto> respostaLivrosDto = livroService.buscarLivros();
@@ -43,8 +51,8 @@ public class LivroController {
         return ResponseEntity.ok(respostaLivrosDto);
     }
     @GetMapping("/buscar-livro/nome")
-    public ResponseEntity <List<String>> buscarNomeLivro (@RequestParam String nomeLivro){
-        List<String> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro);
+    public ResponseEntity <Page<String>> buscarNomeLivro (@RequestParam String nomeLivro, Pageable pageable){
+        Page<String> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro, pageable);
         return ResponseEntity.ok(respostaLivrosDto);
     }
 

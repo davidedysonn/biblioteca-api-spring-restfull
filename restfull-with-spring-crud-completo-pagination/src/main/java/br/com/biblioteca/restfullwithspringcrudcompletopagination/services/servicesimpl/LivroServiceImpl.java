@@ -5,6 +5,8 @@ import br.com.biblioteca.restfullwithspringcrudcompletopagination.mapper.LivroMa
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.Livro;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.repositories.LivroRepository;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -51,6 +53,21 @@ public class LivroServiceImpl implements LivroService {
     }
 
     @Override
+    public LivroDto adicionarQuantidade(Long id, int quantidade) {
+        Optional<Livro> verificarLivro = livroRepository.findById(id);
+        if(!verificarLivro.isEmpty() && verificarLivro != null){
+            Livro livroEntity = verificarLivro.get();
+            livroEntity.setQuantidade(livroEntity.getQuantidade() + quantidade);
+            LivroDto retornoDto = livroMapper.toDto(livroRepository.save(livroEntity));
+            return retornoDto;
+        }
+        else {
+            //Lembra de fazer tratamento de erros aqui
+            return null;
+        }
+    }
+
+    @Override
     public List<LivroDto> buscarLivros() {
         List<Livro> livros = livroRepository.findAll();
         List<LivroDto> retornoLivros = new ArrayList<>();
@@ -62,8 +79,8 @@ public class LivroServiceImpl implements LivroService {
     }
 
     @Override
-    public List<String> buscaPorNomeLivro(String nomeLivro) {
-        List<String> livroEnt = livroRepository.buscarLivroPorNome(nomeLivro);
+    public Page<String> buscaPorNomeLivro(String nomeLivro, Pageable pageable) {
+        Page<String> livroEnt = livroRepository.buscarLivroPorNome(nomeLivro, pageable);
         return livroEnt;
     }
 
@@ -81,6 +98,8 @@ public class LivroServiceImpl implements LivroService {
 
 
     }
+
+
 
 
     @Override

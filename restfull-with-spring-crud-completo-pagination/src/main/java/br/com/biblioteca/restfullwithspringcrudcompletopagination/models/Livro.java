@@ -19,17 +19,20 @@ public class Livro implements Serializable {
     private List<Genero> generos;
     @Column(name="data_lancamento")
     private LocalDate dataLancamento;
+    private int quantidade;
 
+    
     public Livro(){
 
     }
 
-    public Livro(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento) {
+    public Livro(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento, int quantidade) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
         this.autor = autor;
         this.generos = generos;
         this.dataLancamento = dataLancamento;
+        this.quantidade = quantidade;
     }
 
     public Long getIdLivro() {
@@ -72,6 +75,14 @@ public class Livro implements Serializable {
         this.dataLancamento = dataLancamento;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,6 +104,7 @@ public class Livro implements Serializable {
                 ", autor='" + autor + '\'' +
                 ", generos=" + generos +
                 ", dataLancamento=" + dataLancamento +
+                ", quantidade=" + quantidade +
                 '}';
     }
 }
