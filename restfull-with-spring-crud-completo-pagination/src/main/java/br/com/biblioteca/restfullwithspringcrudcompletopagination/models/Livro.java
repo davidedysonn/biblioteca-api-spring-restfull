@@ -1,6 +1,6 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.models;
 
-import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.Genero;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -16,23 +16,26 @@ public class Livro implements Serializable {
     @Column(name="nome_livro")
     private String nomeLivro;
     private String autor;
-    private List<Genero> generos;
+    private List<String> generos;
     @Column(name="data_lancamento")
     private LocalDate dataLancamento;
     private int quantidade;
+    @ManyToMany(mappedBy = "livros")
+    @JsonIgnoreProperties(value = "{id}, {nome},{sexo}, {endereco},{tipoAturizacao},{banido}, {livros}", allowSetters = true)
+    private List<Pessoa> pessoa;
 
-    
     public Livro(){
 
     }
 
-    public Livro(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento, int quantidade) {
+    public Livro(Long idLivro, String nomeLivro, String autor, List<String> generos, LocalDate dataLancamento, int quantidade, List<Pessoa> pessoa) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
         this.autor = autor;
         this.generos = generos;
         this.dataLancamento = dataLancamento;
         this.quantidade = quantidade;
+        this.pessoa = pessoa;
     }
 
     public Long getIdLivro() {
@@ -59,11 +62,11 @@ public class Livro implements Serializable {
         this.autor = autor;
     }
 
-    public List<Genero> getGeneros() {
+    public List<String> getGeneros() {
         return generos;
     }
 
-    public void setGeneros(List<Genero> generos) {
+    public void setGeneros(List<String> generos) {
         this.generos = generos;
     }
 
@@ -81,6 +84,14 @@ public class Livro implements Serializable {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public List<Pessoa> getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(List<Pessoa> pessoa) {
+        this.pessoa = pessoa;
     }
 
     @Override
@@ -105,6 +116,7 @@ public class Livro implements Serializable {
                 ", generos=" + generos +
                 ", dataLancamento=" + dataLancamento +
                 ", quantidade=" + quantidade +
+                ", pessoa=" + pessoa +
                 '}';
     }
 }

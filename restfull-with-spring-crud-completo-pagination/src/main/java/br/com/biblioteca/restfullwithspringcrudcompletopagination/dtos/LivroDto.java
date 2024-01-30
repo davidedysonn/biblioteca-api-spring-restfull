@@ -1,7 +1,5 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos;
 
-import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.Genero;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
@@ -10,7 +8,7 @@ public class LivroDto implements Serializable {
     private Long idLivro;
     private String nomeLivro;
     private String autor;
-    private List<Genero> generos;
+    private List<String> generos;
     private LocalDate dataLancamento;
     private int quantidade;
 
@@ -18,7 +16,7 @@ public class LivroDto implements Serializable {
 
     }
 
-    public LivroDto(Long idLivro, String nomeLivro, String autor, List<Genero> generos, LocalDate dataLancamento, int quantidade) {
+    public LivroDto(Long idLivro, String nomeLivro, String autor, List<String> generos, LocalDate dataLancamento, int quantidade) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
         this.autor = autor;
@@ -51,11 +49,11 @@ public class LivroDto implements Serializable {
         this.autor = autor;
     }
 
-    public List<Genero> getGeneros() {
+    public List<String> getGeneros() {
         return generos;
     }
 
-    public void setGeneros(List<Genero> generos) {
+    public void setGeneros(List<String> generos) {
         this.generos = generos;
     }
 

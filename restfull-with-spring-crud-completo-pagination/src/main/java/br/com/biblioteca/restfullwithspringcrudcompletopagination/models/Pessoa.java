@@ -1,32 +1,40 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.models;
 
-import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.TipoAturizacao;
-import jakarta.persistence.Column;
-import jakarta.persistence.OneToMany;
+import br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns.TipoAutorizacao;
+import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
-
-public class Pessoa {
+@Entity
+public class Pessoa implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String sexo;
     private String endereco;
     @Column(name = "tipo_autorizacao")
-    private TipoAturizacao tipoAturizacao;
+    private TipoAutorizacao tipoAutorizacao;
     private Boolean banido;
+    @ManyToMany
+    @JoinTable(
+            name = "livros_pessoas",
+            joinColumns = @JoinColumn(name = "id_livros"),
+            inverseJoinColumns = @JoinColumn(name = "id_pessoa")
+    )
     private List<Livro> livros;
 
 
     public Pessoa() {
     }
 
-    public Pessoa(Long id, String nome, String sexo, String endereco, TipoAturizacao tipoAturizacao, Boolean banido, List<Livro> livros) {
+    public Pessoa(Long id, String nome, String sexo, String endereco, TipoAutorizacao tipoAutorizacao, Boolean banido, List<Livro> livros) {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
         this.endereco = endereco;
-        this.tipoAturizacao = tipoAturizacao;
+        this.tipoAutorizacao = tipoAutorizacao;
         this.banido = banido;
         this.livros = livros;
     }
@@ -63,12 +71,12 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public TipoAturizacao getTipoAturizacao() {
-        return tipoAturizacao;
+    public TipoAutorizacao getTipoAturizacao() {
+        return tipoAutorizacao;
     }
 
-    public void setTipoAturizacao(TipoAturizacao tipoAturizacao) {
-        this.tipoAturizacao = tipoAturizacao;
+    public void setTipoAturizacao(TipoAutorizacao tipoAutorizacao) {
+        this.tipoAutorizacao = tipoAutorizacao;
     }
 
     public Boolean getBanido() {
@@ -107,7 +115,7 @@ public class Pessoa {
                 ", nome='" + nome + '\'' +
                 ", sexo='" + sexo + '\'' +
                 ", endereco='" + endereco + '\'' +
-                ", tipoAturizacao=" + tipoAturizacao +
+                ", tipoAutorizacao=" + tipoAutorizacao +
                 ", banido=" + banido +
                 ", livros=" + livros +
                 '}';

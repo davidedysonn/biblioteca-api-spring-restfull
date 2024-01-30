@@ -35,3 +35,7 @@ e
 ärestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/dtos/PessoaDto.java,f\0\f03671452b47eb1c79228d796333907d9e57842b
  
 ôrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/repositories/PessoaRepository.java,e\c\ec129e88b010ec38fd66cfc586a17b92045423c4
+…
+òrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/enuns/TipoAutorizacao.java,3\9\39451ef1e936eba339e4ea4238495c350355bd44
+¿
+èrestfull-with-spring-crud-completo-pagination/src/main/java/br/com/biblioteca/restfullwithspringcrudcompletopagination/models/enuns/String.java,c\3\c388ec2c2503b678ce95510d7e106e61e89a7ebd

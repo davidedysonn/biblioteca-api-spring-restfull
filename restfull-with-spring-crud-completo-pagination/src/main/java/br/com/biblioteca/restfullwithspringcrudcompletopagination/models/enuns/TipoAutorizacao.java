@@ -1,12 +1,12 @@
 package br.com.biblioteca.restfullwithspringcrudcompletopagination.models.enuns;
 
-public enum TipoAturizacao {
+public enum TipoAutorizacao {
 
     ALUNO("Aluno"),
     AGENTE_BIBLIOTECARIO("Agente Bibliotecário");
     private String displayName;
 
-    TipoAturizacao(String displayName) {
+    TipoAutorizacao(String displayName) {
         this.displayName = displayName;
     }
 
@@ -18,10 +18,4 @@ public enum TipoAturizacao {
         this.displayName = displayName;
     }
 
-    @Override
-    public String toString() {
-        return "TipoAturizacao{" +
-                "displayName='" + displayName + '\'' +
-                '}';
-    }
 }
