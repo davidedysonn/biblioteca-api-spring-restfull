@@ -31,37 +31,37 @@ public class LivroController {
         return ResponseEntity.created(new URI("/livro/cadastro")).body(respostaLivroDto);
     }
 
-    @PutMapping("/alterar-cadastro/{id}")
+    @PutMapping("/atualizar/{id}")
     public ResponseEntity<LivroDto> atualizarCadastroLivro (@PathVariable Long id, @RequestBody LivroDto livroDto){
         LivroDto respostaLivroDto = livroService.atualizarLivro(id,livroDto);
         log.debug("Livro atualizado com sucesso");
         return ResponseEntity.ok(respostaLivroDto);
     }
 
-    @PutMapping("/adicionar-quantidade/{id}/")
+    @PutMapping("/quantidade/{id}/")
     public ResponseEntity<LivroDto> adicionarQuantidade (@PathVariable Long id, @RequestParam int quantidade){
         LivroDto respostaLivroDto = livroService.adicionarQuantidade(id,quantidade);
 
         return ResponseEntity.ok(respostaLivroDto);
     }
 
-    @GetMapping("/buscar-livros")
+    @GetMapping("/buscar")
     public ResponseEntity<List<LivroDto>> buscarLivros (){
         List<LivroDto> respostaLivrosDto = livroService.buscarLivros();
         return ResponseEntity.ok(respostaLivrosDto);
     }
-    @GetMapping("/buscar-livro/{id}")
+    @GetMapping("/buscar/{id}")
     public ResponseEntity<LivroDto> buscarLivro (@PathVariable Long id){
         LivroDto respostaLivrosDto = livroService.buscarLivroPorId(id);
         return ResponseEntity.ok(respostaLivrosDto);
     }
-    @GetMapping("/buscar-livro/nome")
+    @GetMapping("/buscar/nome")
     public ResponseEntity <Page<String>> buscarNomeLivro (@RequestParam String nomeLivro, Pageable pageable){
         Page<String> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro, pageable);
         return ResponseEntity.ok(respostaLivrosDto);
     }
 
-    @DeleteMapping("/remover-livro/{id}")
+    @DeleteMapping("/remover/{id}")
     public ResponseEntity<LivroDto> removerLivro (@PathVariable Long id){
         livroService.deletarCliente(id);
         return ResponseEntity.noContent().build();
