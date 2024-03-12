@@ -24,14 +24,14 @@ public class LivroController {
         this.livroService = livroService;
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("")
     public ResponseEntity<LivroDto> cadastroLivro (@RequestBody LivroDto livroDto) throws URISyntaxException {
         LivroDto respostaLivroDto = livroService.cadastroLivro(livroDto);
         log.debug("Cadastro criado com sucesso");
         return ResponseEntity.created(new URI("/livro/cadastro")).body(respostaLivroDto);
     }
 
-    @PutMapping("/atualizar/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<LivroDto> atualizarCadastroLivro (@PathVariable Long id, @RequestBody LivroDto livroDto){
         LivroDto respostaLivroDto = livroService.atualizarLivro(id,livroDto);
         log.debug("Livro atualizado com sucesso");
@@ -45,23 +45,23 @@ public class LivroController {
         return ResponseEntity.ok(respostaLivroDto);
     }
 
-    @GetMapping("/buscar")
-    public ResponseEntity<List<LivroDto>> buscarLivros (){
+    @GetMapping("")
+    public ResponseEntity<List<LivroDto>> buscarTodosOsLivros (){
         List<LivroDto> respostaLivrosDto = livroService.buscarLivros();
         return ResponseEntity.ok(respostaLivrosDto);
     }
-    @GetMapping("/buscar/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<LivroDto> buscarLivro (@PathVariable Long id){
         LivroDto respostaLivrosDto = livroService.buscarLivroPorId(id);
         return ResponseEntity.ok(respostaLivrosDto);
     }
-    @GetMapping("/buscar/nome")
+    @GetMapping("/nome")
     public ResponseEntity <Page<String>> buscarNomeLivro (@RequestParam String nomeLivro, Pageable pageable){
         Page<String> respostaLivrosDto = livroService.buscaPorNomeLivro(nomeLivro, pageable);
         return ResponseEntity.ok(respostaLivrosDto);
     }
 
-    @DeleteMapping("/remover/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<LivroDto> removerLivro (@PathVariable Long id){
         livroService.deletarCliente(id);
         return ResponseEntity.noContent().build();
