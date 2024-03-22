@@ -2,6 +2,7 @@ package br.com.biblioteca.restfullwithspringcrudcompletopagination.controllers;
 
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.dtos.LivroDto;
 import br.com.biblioteca.restfullwithspringcrudcompletopagination.services.LivroService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -13,6 +14,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+@Tag(name="Livro", description = "CRUD de Livro")
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/livro")
 public class LivroController {
